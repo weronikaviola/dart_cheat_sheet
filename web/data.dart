@@ -1,3 +1,5 @@
+// < &#60;
+// > &#62;
 Map getData() {
   var demoData = {
     'basic syntax': {
@@ -5,7 +7,7 @@ Map getData() {
       'declaring objects using literals': 'List: <span class="code">[2, 4, 5]</span><br>Set: <span class="code">{2, 5, 7}</span><br>Map: <span class="code">{\'one\': 1, \'two\': 2}</span>',
       'declaring fields': '<span class="code">var</span> is a generic/dynamic variable type<br><span class="code">final</span> is a final <span class="code">var</span><br><span class="code">const</span> is a constant',
       'checking types': '<span class="code">as</span> typecast<br><span class="code">is</span> like javascript <span class="code"> instanceof</span><br><span class="code">is!</span> - <span class="code">!instanceof</span>',
-      'chaining method calls': '<span class="code">a..b = true..c = 5</span><br>returns a reference to the object before the cascade instead of result. Allows for chaining methods',
+      'chaining method calls': '<span class="code">a..b = true..c = 5</span><br>returns a reference to the object before the cascade, instead of the result. Allows for chaining methods',
       'dealing with null': '<span class="code">b ??= a</span> - like ruby <span class="code">||=</span><br><span class="code">a = first ?? second</span> - if first is <span class="code">null</span> then it will assign value to second<br><span class="code">a?.b</span> safe navigation operator',
       'function params': 'optional parameters: <span class="code">void myFunction([String name, int age]) {</span><br>optional parameters: <span class="code">String myFunction({String greeter, String greetee}) {</span><br>optional named params with default values: <span class="code">int myFunction(String nonOptionalName, { int age = 99 }) {',
       'function signature': 'arrow shortcut: <span class="code">int incr(int a) => a + 1;</span>',
@@ -26,8 +28,14 @@ Map getData() {
     },
     'iterators': {
       'itarable': 'an abstract class. Classes like `List` and `Set` inherit from it. Iterable doesn\'t have `[]` method. This method is implemented directly on the `List` class.',
-      'iteratr': 'an object that reads elements from an iterable.',
+      'iterator': 'an object that reads elements from an iterable.',
       'most common methods': '<span class="code">elementAt(1)<br>for (var el in iterable)<br>every((el) => el > 3);<br>any((el) => el < 0);<br>firstWhere, singleWhere</span> those will throw a <span class="code">StateError</span> if nothing found<br><span class="code">where</span> - no error<br><span class="code">takeWhile, skipWhile</span>',
+    },
+    'asynchronous': {
+      'future': '<div class="information">A <i>future</i> is an instance of the <i>Future</i> class. A future represents a result of an async operation and can have two states: <b>uncompleted</b> and <b>completed</b>. A future can complete with a value or with an error.<br><span class="code">Future&#60;void&#62; fetchUserOrder() {...</span>',
+      'async and await': '<span class="code">Future&#60;String&#62; someMethod() async { ··· }</span><br><div class="information"><span class="bullet">1. add <span class="code">async</span> before the function body</span><span class="bullet">2. update the return type to <span class="code">Future&#60;T&#62;</span></span></div><br><span class="code">var order = await fetchUserOrder(); </span>',
+      'handling errors': 'like in synchronous code, use <span class="code">try-catch</span>',
+
     }
   };
 
